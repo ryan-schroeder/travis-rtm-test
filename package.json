@@ -1,0 +1,23 @@
+{
+  "name": "travis-rtm-test",
+  "version": "1.0.0",
+  "description": "yooooooooooo",
+  "main": "server.js",
+  "scripts": {
+    "test": "grunt test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryan-schroeder/travis-rtm-test.git"
+  },
+  "author": "Ryan the Boss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryan-schroeder/travis-rtm-test/issues"
+  },
+  "homepage": "https://github.com/ryan-schroeder/travis-rtm-test#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
