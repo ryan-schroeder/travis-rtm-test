@@ -40,7 +40,7 @@ module.exports = function(grunt) {
     },
     shell: {
       integrationStart: {
-        command: `| /usr/local/bin/docker-compose run --service-ports --rm integrationtester /bin/bash -c
+        command: `| docker-compose run --service-ports --rm integrationtester /bin/bash -c
                   | "node <%= grunt.task.current.args.indexOf('debug') !== -1 ? '--debug-brk=5858' : ''%>
                   | node_modules/grunt-cli/bin/grunt integrationTest"`.replace(/^\s*\|/gm, '').replace(/[\r|\n]+/gm, '').trim(),
         options: {
@@ -57,7 +57,7 @@ module.exports = function(grunt) {
         }
       },
       integrationCleanup: {
-        command: '/usr/local/bin/docker-compose down -v --remove-orphans',
+        command: 'docker-compose down -v --remove-orphans',
         options: {
           execOptions: {
             cwd: 'test/it'
