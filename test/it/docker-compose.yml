@@ -1,0 +1,15 @@
+version: '2'
+services:
+  integrationtester:
+    image: node:4
+    working_dir: /app
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ../../:/app
+      - ../../node_modules/:/app/node_modules
+    ports:
+      - "5858:5858"
+    links:
+      - awesome # this causes "awesome" to be started before "integrationtester" when we do "docker-compose run integrationtester ..."
+  awesome:
+    build: ../../
