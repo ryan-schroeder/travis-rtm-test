@@ -21,6 +21,7 @@
     "express": "^4.14.0"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "grunt": "^1.0.1",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-env": "^0.4.4",
